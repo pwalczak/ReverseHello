@@ -36,7 +36,7 @@ public class Main implements Runnable {
             try {
                 myThread.join();
             } catch (InterruptedException e) {
-                logger.info(e);
+                logger.error(e);
             }
         }
     }
@@ -44,6 +44,6 @@ public class Main implements Runnable {
 
     public void run() {
         createThreadSequence();
-        logger.error("Hello from Thread " + threadNumber);
+        logger.info("Hello from Thread " + threadNumber);
     }
 }
